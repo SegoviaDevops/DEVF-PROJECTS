@@ -1,28 +1,93 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(./assets/iron_bank.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
-    background-color: #f4f4f4;
+    
 }
 
 .container {
-    background-color: white;
+    /* From https://css.glass */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 40%;
+    font-family: "Roboto", sans-serif;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: center; 
+} 
+.inputDatos{
+    background: rgba(255, 255, 255, 0.2); 
+    font-family: "Roboto", sans-serif;
+    font-style: bold;
+    border:none;
+    border-bottom: 2px solid white;
+    outline: none;
+    background: transparent;
+    margin: 10px 20px;
+    color: white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input::placeholder{
+    color: white;
+    opacity: 1;
+}
+#loginSection {
+    margin: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 button {
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
+#consultarSaldoBtn, #ingresarMontoBtn, #retirarMontoBtn {
+   background: rgb(123, 122, 126);
+   border-radius: 1px;
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(20px);
+   -webkit-backdrop-filter: blur(20px);
+   border: 1px solid rgba(228, 19, 64, 0.3);
+   color: white;
+}
+#montoInput{
+   background: transparent;
+   border-radius: 1px;
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(20px);
+   -webkit-backdrop-filter: blur(20px);
+   border: 1px solid rgba(228, 19, 64, 0.3);
+   color: white;
+}
 .error {
-    color: red;
+    color: yellow;
 }
 
 input {
@@ -33,4 +98,21 @@ input {
 
 #operacionesSection {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+#btn{
+    /* From https://css.glass */
+/* From https://css.glass */
+background: rgba(228, 19, 64, 1);
+border-radius: 1px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(228, 19, 64, 0.3);
+color: white;
 }

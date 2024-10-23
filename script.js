@@ -1,7 +1,7 @@
 var cuentas = [
+    { nombre: "Raul", email: "raul@example.com", saldo: 67, password: "5678" },
     { nombre: "Jimena", email: "jimena@example.com", saldo: 200, password: "1234" },
     { nombre: "Santiago", email: "santiago@example.com", saldo: 290, password: "abcd" },
-    { nombre: "Raul", email: "raul@example.com", saldo: 67, password: "5678" }
   ];
   
   var cuentaSeleccionada = null;
@@ -37,6 +37,7 @@ function mostrarMenuOperaciones() {
 function mostrarSaldo() {
     var mensaje = document.getElementById("menuMessage");
     mensaje.innerText = (`Tu saldo actual es: $${cuentaSeleccionada.saldo}`);
+    mensaje.style.color= "yellow";  
 }
 
 // Función para mostrar la opción de ingresar dinero
@@ -60,6 +61,7 @@ function mostrarSeccionOperaciones(accion, funcionConfirmar) {
 function ingresarMonto() {
     var monto = Number(document.getElementById("montoInput").value);
     var mensaje = document.getElementById("operacionMensaje");
+        mensaje.style.color= "yellow";  
     if (monto <= 0 || (cuentaSeleccionada.saldo + monto) > 990) {
         mensaje.innerText = "Monto no válido. El saldo no puede exceder $990.";
     } else {
@@ -74,6 +76,7 @@ function ingresarMonto() {
 function retirarMonto() {
     var monto = Number(document.getElementById("montoInput").value);
     var mensaje = document.getElementById("operacionMensaje");
+        mensaje.style.color= "yellow";  
 
     if (monto <= 0 || (cuentaSeleccionada.saldo - monto) < 10) {
         mensaje.innerText = "Monto no válido. El saldo no puede ser menor a $10.";
