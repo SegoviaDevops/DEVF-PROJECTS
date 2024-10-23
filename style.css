@@ -1,7 +1,6 @@
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-style: normal;
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -11,11 +10,9 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    
 }
 
 .container {
-    /* From https://css.glass */
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -25,11 +22,9 @@ body {
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; 
 } 
 .inputDatos{
@@ -115,4 +110,51 @@ backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(20px);
 border: 1px solid rgba(228, 19, 64, 0.3);
 color: white;
+}
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px; /* Tamaño de fuente más pequeño en móviles */
+    }
+
+    .container {
+        width: 90%; /* Ancho mayor en móviles */
+        padding: 15px; /* Menos padding */
+    }
+}
+
+/* Media Queries en modo portrait */
+@media (orientation: portrait) {
+    .container {
+        width: 80%; /* Ajuste específico en portrait */
+    }
+}
+
+/* Media Queries en modo landscape */
+@media (orientation: landscape) {
+    .container {
+        width: 60%; /* Ajuste específico en landscape */
+    }
+}
+
+/* Estilos para laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 20px; /* Tamaño de fuente normal en laptops */
+    }
+
+    .container {
+        width: 50%; /* Ancho en laptops */
+    }
+}
+
+/* Estilos para computadoras de escritorio */
+@media (min-width: 1025px) {
+    body {
+        font-size: 22px; /* Tamaño de fuente mayor en desktop */
+    }
+
+    .container {
+        width: 40%; /* Ancho en desktop */
+    }
 }
